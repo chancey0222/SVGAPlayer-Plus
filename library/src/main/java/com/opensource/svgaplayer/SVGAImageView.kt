@@ -37,12 +37,6 @@ open class SVGAImageView @JvmOverloads constructor(
 
     var loops = 0
 
-    @Deprecated(
-        "It is recommended to use clearAfterDetached, or manually call to SVGAVideoEntity#clear." +
-                "If you just consider cleaning up the canvas after playing, you can use FillMode#Clear.",
-        level = DeprecationLevel.WARNING
-    )
-    var clearsAfterStop = false
     var clearsAfterDetached = false
     var fillMode: FillMode = FillMode.Forward
     var callback: SVGACallback? = null
@@ -67,7 +61,6 @@ open class SVGAImageView @JvmOverloads constructor(
         val typedArray =
             context.theme.obtainStyledAttributes(attrs, R.styleable.SVGAImageView, 0, 0)
         loops = typedArray.getInt(R.styleable.SVGAImageView_loopCount, 0)
-        clearsAfterStop = typedArray.getBoolean(R.styleable.SVGAImageView_clearsAfterStop, false)
         clearsAfterDetached =
             typedArray.getBoolean(R.styleable.SVGAImageView_clearsAfterDetached, false)
         mAntiAlias = typedArray.getBoolean(R.styleable.SVGAImageView_antiAlias, true)
@@ -243,7 +236,7 @@ open class SVGAImageView @JvmOverloads constructor(
     }
 
     fun stopAnimation() {
-        stopAnimation(clear = clearsAfterStop)
+        stopAnimation(clear = clearsAfterDetached)
     }
 
     fun stopAnimation(clear: Boolean) {

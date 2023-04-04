@@ -341,35 +341,6 @@ class SVGAParser(context: Context?) {
         }
     }
 
-    /**
-     * @deprecated from 2.4.0
-     */
-    @Deprecated("This method has been deprecated from 2.4.0.", ReplaceWith("this.decodeFromAssets(assetsName, callback)"))
-    fun parse(assetsName: String, callback: ParseCompletion?) {
-        this.decodeFromAssets(assetsName, callback,null)
-    }
-
-    /**
-     * @deprecated from 2.4.0
-     */
-    @Deprecated("This method has been deprecated from 2.4.0.", ReplaceWith("this.decodeFromURL(url, callback)"))
-    fun parse(url: URL, callback: ParseCompletion?) {
-        this.decodeFromURL(url, callback,null)
-    }
-
-    /**
-     * @deprecated from 2.4.0
-     */
-    @Deprecated("This method has been deprecated from 2.4.0.", ReplaceWith("this.decodeFromInputStream(inputStream, cacheKey, callback, closeInputStream)"))
-    fun parse(
-            inputStream: InputStream,
-            cacheKey: String,
-            callback: ParseCompletion?,
-            closeInputStream: Boolean = false
-    ) {
-        this.decodeFromInputStream(inputStream, cacheKey, callback, closeInputStream,null)
-    }
-
     private fun invokeCompleteCallback(
             videoItem: SVGAVideoEntity,
             callback: ParseCompletion?,
