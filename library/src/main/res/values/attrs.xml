@@ -5,7 +5,6 @@
         <attr name="autoPlay" format="boolean" />
         <attr name="antiAlias" format="boolean" />
         <attr name="loopCount" format="integer" />
-        <attr name="clearsAfterStop" format="boolean" />
         <attr name="clearsAfterDetached" format="boolean" />
         <attr name="fillMode" format="enum">
             <enum name="Backward" value="0" />
