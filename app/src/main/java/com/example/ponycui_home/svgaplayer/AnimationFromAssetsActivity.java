@@ -3,7 +3,7 @@ package com.example.ponycui_home.svgaplayer;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 
@@ -15,9 +15,7 @@ import com.opensource.svgaplayer.utils.log.SVGALogger;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
 public class AnimationFromAssetsActivity extends Activity {
 

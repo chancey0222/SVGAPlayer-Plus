@@ -1,17 +1,17 @@
 buildscript {
     repositories {
-        google()
-        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/google'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
     }
 }
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/google'}
     }
 }

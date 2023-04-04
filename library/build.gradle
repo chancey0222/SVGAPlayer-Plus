@@ -1,12 +1,13 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 31
     }
     compileOptions {
         kotlinOptions.freeCompilerArgs += ['-module-name', "com.opensource.svgaplayer"]
