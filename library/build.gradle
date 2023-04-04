@@ -8,6 +8,7 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 31
+        consumerProguardFiles 'consumer-proguard.pro'
     }
     compileOptions {
         kotlinOptions.freeCompilerArgs += ['-module-name', "com.opensource.svgaplayer"]
