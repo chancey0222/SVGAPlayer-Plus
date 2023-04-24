@@ -8,6 +8,7 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 31
+        versionName "1.0.1"
         consumerProguardFiles 'consumer-proguard.pro'
     }
     compileOptions {
